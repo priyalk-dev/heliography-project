@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Form</title>
+    <style>
+      body {
+        width: 500px;
+        margin: 0 auto;
+        padding: 50px;
+        background-color: lightblue;
+      }
+
+      div.elem-group {
+        margin: 20px 0;
+      }
+
+      div.elem-group.inlined {
+        width: 49%;
+        display: inline-block;
+        float: left;
+        margin-left: 1%;
+      }
+
+      label {
+        display: block;
+        font-family: "Nanum Gothic";
+        padding-bottom: 10px;
+        font-size: 1.25em;
+      }
+
+      input,
+      select,
+      textarea {
+        border-radius: 2px;
+        border: 2px solid #777;
+        box-sizing: border-box;
+        font-size: 1.25em;
+        font-family: "Nanum Gothic";
+        width: 100%;
+        padding: 10px;
+      }
+
+      div.elem-group.inlined input {
+        width: 95%;
+        display: inline-block;
+      }
+
+      textarea {
+        height: 250px;
+      }
+
+      hr {
+        border: 1px dotted #ccc;
+      }
+
+      button {
+        height: 50px;
+        background: blueviolet;
+        border: none;
+        color: white;
+        font-size: 1.25em;
+        font-family: "Nanum Gothic";
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        border: 2px solid black;
+      }
+      h1 {
+        font-size: 40px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Booking Form</h1>
+
+    <br />
+    <form action="#" method="post">
+      <div class="elem-group">
+        <label for="name">Your Name</label>
+        <input
+          type="text"
+          id="name"
+          name="visitor_name"
+          placeholder="Name"
+          pattern="[A-Z\sa-z]{3,20}"
+          required
+        />
+      </div>
+      <div class="elem-group">
+        <label for="email">Your E-mail</label>
+        <input
+          type="email"
+          id="email"
+          name="visitor_email"
+          placeholder="email@gmail.com"
+          required
+        />
+      </div>
+      <div class="elem-group">
+        <label for="phone">Your Phone</label>
+        <input
+          type="tel"
+          id="phone"
+          name="visitor_phone"
+          placeholder="733-879-6778"
+          pattern="(\d{3})-?\s?(\d{3})-?\s?(\d{4})"
+          required
+        />
+      </div>
+      <hr />
+
+      <div class="elem-group">
+        <label for="room-selection">Select Function</label>
+        <select id="room-selection" name="room_preference" required>
+          <option value=""></option>
+          <option value="adjacent">baby shower</option>
+          <option value="connecting">New born baby</option>
+          <option value="adjoining">Birth day</option>
+          <option value="adjacent">wedding</option>
+          <option value="adjacent">reunion</option>
+        </select>
+      </div>
+      <hr />
+      <div class="elem-group">
+        <label for="message">Anything Else?</label>
+        <textarea
+          id="message"
+          name="visitor_message"
+          placeholder="Tell us anything else that might be important."
+          required
+        ></textarea>
+      </div>
+      <button type="submit">Confirm</button>
+    </form>
+  </body>
+</html>
